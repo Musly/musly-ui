@@ -24,7 +24,7 @@
     "dayjs": "^1.10.6",
     "dotenv": "^10.0.0",
     "graphql": "^15.5.1",
-    "i18next": "^20.3.5",
+    "i18next": "^20.4.0",
     "i18next-browser-languagedetector": "^6.1.2",
     "is-retina": "^1.0.3",
     "jwt-decode": "^3.1.2",
