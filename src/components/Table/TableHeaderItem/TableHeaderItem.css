@@ -1,0 +1,9 @@
+.table__header__item {
+  text-align: left;
+
+  @apply py-3 px-4;
+
+  &--checkbox {
+    width: 16px;
+  }
+}

@@ -1,0 +1,53 @@
+.dashboard {
+  display: flex;
+
+  @apply -mx-3;
+
+  &__item {
+    @apply px-3 w-1/5;
+
+    &:hover {
+      .dashboard__item__panel {
+        @apply shadow-xl;
+      }
+
+      .dashboard__item__icon,
+      .dashboard__item__count,
+      .dashboard__item__label {
+        @apply text-blue-500;
+      }
+    }
+
+    &__panel {
+      display: flex;
+      align-items: center;
+      transition-property: box-shadow;
+      transition-duration: 200ms;
+
+      @apply bg-white shadow-md rounded-md py-5 px-8;
+    }
+
+    &__icon {
+      transition-property: color;
+      transition-duration: 400ms;
+      flex-grow: 0;
+
+      @apply text-5xl text-gray-500 ease-sharp mr-8;
+    }
+
+    &__count {
+      font-weight: 600;
+      transition-property: color;
+      transition-duration: 400ms;
+
+      @apply text-4xl text-gray-600 ease-sharp;
+    }
+
+    &__label {
+      transition-property: color;
+      transition-duration: 400ms;
+
+      @apply text-gray-500 ease-sharp;
+    }
+  }
+}

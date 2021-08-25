@@ -1,0 +1,9 @@
+.table__body__actions {
+  @apply py-0 px-4 w-1/12;
+
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}

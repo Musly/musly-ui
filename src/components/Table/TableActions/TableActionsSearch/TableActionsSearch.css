@@ -1,0 +1,38 @@
+.table__actions__search {
+  flex-grow: 0;
+  display: flex;
+  overflow: hidden;
+  transition-property: border-color, box-shadow;
+  transition-duration: 300ms;
+
+  @apply border shadow-inner bg-gray-50 border-gray-300 border-opacity-0 rounded-md w-80 ease-sharp;
+
+  &:hover {
+    @apply border-opacity-100;
+  }
+
+  &:focus-within {
+    @apply border-opacity-100 shadow-tsearch;
+  }
+
+  &__icon {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    @apply text-xl text-gray-500;
+  }
+
+  &__input {
+    flex-grow: 1;
+
+    @apply px-2 bg-transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

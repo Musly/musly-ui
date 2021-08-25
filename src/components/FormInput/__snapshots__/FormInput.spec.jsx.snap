@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormInput /> should render with error 1`] = `
+<label
+  className="input input--vertical"
+>
+  <span
+    className="input__label input__label--error"
+  >
+    Test label
+  </span>
+  <input
+    className="input__input input__input--error"
+    onChange={null}
+    placeholder={null}
+    type="text"
+    value=""
+  />
+  <div
+    className="input__error"
+  >
+    Test error
+  </div>
+</label>
+`;
+
+exports[`<FormInput /> should render with label 1`] = `
+<label
+  className="input input--vertical"
+>
+  <span
+    className="input__label"
+  >
+    Test label
+  </span>
+  <input
+    className="input__input"
+    onChange={null}
+    placeholder={null}
+    type="text"
+    value=""
+  />
+</label>
+`;
+
+exports[`<FormInput /> should render without label and error 1`] = `
+<label
+  className="input input--vertical"
+>
+  <input
+    className="input__input"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    placeholder={null}
+    type="text"
+    value=""
+  />
+</label>
+`;

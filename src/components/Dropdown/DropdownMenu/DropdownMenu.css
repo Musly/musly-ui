@@ -1,0 +1,28 @@
+.dropdown__menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 200ms;
+
+  @apply p-1 ease-sharp;
+
+  &--top {
+    top: 100%;
+  }
+}
+
+.dropdown:hover .dropdown__menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown__menu__inner {
+  @apply rounded-md bg-white py-1 shadow-lg border border-gray-100;
+}
+
+.dropdown__menu__inner__list {
+  @apply my-1;
+}

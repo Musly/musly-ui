@@ -1,0 +1,30 @@
+.login {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+
+  @apply px-12 py-32;
+}
+
+.login__content {
+  max-width: 420px;
+  min-width: 350px;
+}
+
+.login__logo {
+  @apply mb-24;
+}
+
+.login__headline {
+  font-weight: 700;
+
+  @apply text-4xl mb-4;
+}
+
+.login__description {
+  @apply text-lg text-gray-500 mb-16;
+}
+
+.login__forgot-password {
+  @apply pt-2 text-right text-sm;
+}

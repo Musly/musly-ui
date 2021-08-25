@@ -1,0 +1,26 @@
+.create-group__wrapper {
+  display: flex;
+  max-width: 650px;
+  flex-direction: column;
+  align-items: center;
+
+  @apply px-12 py-32 mx-auto;
+}
+
+.create-group__headline {
+  font-weight: 700;
+  text-align: center;
+
+  @apply text-4xl mb-4;
+}
+
+.create-group__description {
+  text-align: center;
+
+  @apply text-lg text-gray-500 mb-16;
+}
+
+.create-group__content {
+  max-width: 450px;
+  min-width: 400px;
+}

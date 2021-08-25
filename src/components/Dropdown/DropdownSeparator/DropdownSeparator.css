@@ -1,0 +1,3 @@
+.dropdown__separator {
+  @apply my-2 border-b border-gray-100;
+}

@@ -1,0 +1,14 @@
+query FetchSongs($groupId: ID!) {
+  songs(groupId: $groupId) {
+    id
+    title
+    artist {
+      title
+    }
+    genre {
+      title
+    }
+    key
+    duration
+  }
+}

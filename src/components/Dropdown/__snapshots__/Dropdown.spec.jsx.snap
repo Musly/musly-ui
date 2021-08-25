@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> should render as expected 1`] = `
+<div
+  className="dropdown"
+  data-test-id="dropdown"
+>
+  <div>
+    Test
+  </div>
+</div>
+`;

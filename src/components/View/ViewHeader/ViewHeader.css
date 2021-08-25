@@ -1,0 +1,41 @@
+.view__header {
+  user-select: none;
+
+  @apply bg-gray-200 p-12 -mt-12 -ml-12 -mr-12 mb-12 shadow-vheader;
+}
+
+.view__header__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.view__header__icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @apply bg-white rounded-lg text-blue-500 mr-8 text-4xl;
+}
+
+.view__header__titles {
+  flex-grow: 1;
+}
+
+.view__header__headline {
+  font-weight: 700;
+
+  @apply text-2xl leading-6;
+}
+
+.view__header__subline {
+  font-weight: 400;
+
+  @apply text-lg text-gray-400 mt-1 leading-5;
+}
+
+.view__header__actions {
+  @apply ml-8;
+}

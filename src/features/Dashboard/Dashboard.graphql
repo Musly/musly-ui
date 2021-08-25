@@ -1,0 +1,6 @@
+query FetchDashboard($groupId: ID!) {
+  dashboard(groupId: $groupId) {
+    songCount,
+    genreCount
+  }
+}

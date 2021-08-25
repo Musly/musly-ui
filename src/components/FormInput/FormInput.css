@@ -1,0 +1,84 @@
+.input {
+  display: flex;
+
+  &:hover,
+  &:focus-within {
+    .input__label {
+      @apply text-gray-600;
+    }
+
+    .input__label--secondary {
+      @apply text-gray-400;
+    }
+
+    .input__label--error {
+      @apply text-red-500;
+    }
+
+    .input__input {
+      @apply border-blue-300;
+    }
+
+    .input__input--secondary {
+      @apply border-yellow-300;
+    }
+
+    .input__input--error {
+      @apply border-red-500;
+    }
+  }
+
+  &--horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+}
+
+.input__label {
+  font-weight: 600;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 300ms;
+
+  @apply mb-1 ease-sharp text-gray-500 text-sm uppercase;
+}
+
+.input__label--horizontal {
+  width: 20rem;
+}
+
+.input__label--secondary {
+  @apply text-gray-300;
+}
+
+.input__label--error {
+  @apply text-red-500;
+}
+
+.input__input {
+  width: 100%;
+
+  @apply text-black form-input outline-none focus:outline-none focus:ring-2 border
+    ring-opacity-20 bg-white py-3 px-4 rounded-md transition duration-200 ease-sharp
+    ring-blue-500 border-gray-300 focus:border-blue-500;
+
+  &::placeholder {
+    @apply text-gray-400 ease-sharp;
+  }
+}
+
+.input__input--secondary {
+  @apply ring-opacity-40 ring-yellow-500 border-gray-100 focus:border-yellow-500;
+}
+
+.input__input--error {
+  @apply ring-opacity-20 ring-red-500 border-red-500 focus:border-red-500;
+}
+
+.input__error {
+  @apply text-red-500 mt-1 text-sm;
+}

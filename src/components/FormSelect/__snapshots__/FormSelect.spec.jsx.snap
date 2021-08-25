@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormSelect /> it should render without label 1`] = `
+<label
+  className="select select--vertical"
+>
+  <select
+    className="select__select"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    value={1}
+  >
+    <option
+      key="1"
+      selected={true}
+      value={1}
+    >
+      First
+    </option>
+    <option
+      key="2"
+      selected={false}
+      value={2}
+    >
+      Second
+    </option>
+    <option
+      key="3"
+      selected={false}
+      value={3}
+    >
+      Third
+    </option>
+  </select>
+</label>
+`;
+
+exports[`<FormSelect /> should render with label 1`] = `
+<label
+  className="select select--vertical"
+>
+  <span
+    className="select__label"
+  >
+    Test label
+  </span>
+  <select
+    className="select__select"
+    onChange={null}
+    value={2}
+  >
+    <option
+      key="1"
+      selected={false}
+      value={1}
+    >
+      First
+    </option>
+    <option
+      key="2"
+      selected={true}
+      value={2}
+    >
+      Second
+    </option>
+    <option
+      key="3"
+      selected={false}
+      value={3}
+    >
+      Third
+    </option>
+  </select>
+</label>
+`;

@@ -1,0 +1,19 @@
+mutation LoginUser($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    id
+    email
+    firstName
+    lastName
+    displayName
+    emailVerified
+    token
+  }
+}
+
+mutation LogoutUser {
+  logout
+}
+
+mutation CreateUser($email: String!, $firstName: String!, $lastName: String!, $password: String!) {
+  signup(email: $email, password: $password, firstName: $firstName, lastName: $lastName)
+}

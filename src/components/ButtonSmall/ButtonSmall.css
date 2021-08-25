@@ -1,0 +1,22 @@
+.button--small {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 300ms;
+  line-height: 1;
+
+  @apply bg-gray-400 text-white rounded p-1.5 ease-sharp shadow-sm;
+
+  &:hover:not(:disabled) {
+    @apply bg-blue-500 shadow-primary-lg;
+  }
+
+  &,
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+
+    @apply bg-gray-200;
+  }
+}

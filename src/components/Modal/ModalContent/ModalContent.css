@@ -1,0 +1,7 @@
+.modal__content {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 25vh;
+
+  @apply bg-white shadow-2xl rounded-xl ease-sharp p-6;
+}

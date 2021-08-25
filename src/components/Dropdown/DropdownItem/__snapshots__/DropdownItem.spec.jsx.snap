@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownItem /> should render with icon 1`] = `
+<li
+  className="dropdown__item"
+  role="presentation"
+>
+  <a
+    className="dropdown__item__link"
+    href="/test"
+    role="menuitem"
+  >
+    <div
+      className="dropdown__icon"
+      data-test-id="icon"
+    >
+      <home.svg />
+    </div>
+    <span
+      className="flex-grow"
+      data-test-id="label"
+    >
+      Test Label
+    </span>
+  </a>
+</li>
+`;
+
+exports[`<DropdownItem /> should render without icon 1`] = `
+<li
+  className="dropdown__item"
+  role="presentation"
+>
+  <a
+    className="dropdown__item__link"
+    href="/test"
+    role="menuitem"
+  >
+    <span
+      className="flex-grow"
+      data-test-id="label"
+    >
+      Test Label
+    </span>
+  </a>
+</li>
+`;

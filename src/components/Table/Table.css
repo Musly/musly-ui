@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+  overflow: hidden;
+
+  @apply bg-gray-25 rounded-lg shadow-md;
+
+  &--small {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__table {
+    width: 100%;
+    user-select: none;
+
+    @apply border-gray-200;
+  }
+
+  &__header {
+    &__row {
+      user-select: none;
+
+      @apply border-t border-gray-200 select-none;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormCheckbox /> should render without label 1`] = `
+<label
+  className="checkbox group"
+>
+  <input
+    aria-label={null}
+    checked={false}
+    className="checkbox__input"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    type="checkbox"
+    value="some"
+  />
+</label>
+`;
+
+exports[`<FormCheckbox /> should rener with label 1`] = `
+<label
+  className="checkbox group"
+>
+  <input
+    aria-label="test label"
+    checked={false}
+    className="checkbox__input"
+    onChange={null}
+    type="checkbox"
+    value="some"
+  />
+  <span
+    className="checkbox__label"
+  >
+    test label
+  </span>
+</label>
+`;

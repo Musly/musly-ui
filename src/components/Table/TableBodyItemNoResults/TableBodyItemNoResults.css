@@ -1,0 +1,5 @@
+.table__body__item__noResults {
+  text-align: center;
+
+  @apply py-3 px-4;
+}

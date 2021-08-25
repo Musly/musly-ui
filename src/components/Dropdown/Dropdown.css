@@ -1,0 +1,5 @@
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}

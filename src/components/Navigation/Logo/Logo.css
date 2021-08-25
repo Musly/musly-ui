@@ -1,0 +1,13 @@
+.logo {
+  flex-grow: 0;
+
+  @apply border-b border-blue-200 border-opacity-10;
+}
+
+.logo__icon {
+  display: flex;
+  align-items: center;
+  height: 73px;
+
+  @apply py-4 px-6 border-b border-gray-900 border-opacity-30;
+}

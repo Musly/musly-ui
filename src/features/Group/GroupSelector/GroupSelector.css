@@ -1,0 +1,33 @@
+
+.group-selector {
+  &__label {
+    @apply border-b border-blue-900 border-opacity-70 px-6 py-2 text-blue-500;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition-property: background-color;
+    transition-duration: 400ms;
+
+    @apply py-4 px-6 bg-black border-t border-blue-200 border-opacity-10 ease-sharp;
+
+    --tw-bg-opacity: 0.05;
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-weight: 500;
+
+    @apply text-gray-100 text-xl;
+  }
+
+  &__chevron {
+    @apply text-gray-400;
+  }
+}
+
+.dropdown:hover .group-selector__toggle {
+  --tw-bg-opacity: 0.2;
+}

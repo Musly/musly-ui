@@ -1,0 +1,15 @@
+.table__body__item {
+  @apply py-3 px-4;
+
+  &__link {
+    font-weight: 500;
+    transition-property: color;
+    transition-duration: 200ms;
+
+    @apply text-blue-500 hover:text-blue-700 ease-sharp;
+  }
+
+  &--checkbox {
+    width: 16px;
+  }
+}

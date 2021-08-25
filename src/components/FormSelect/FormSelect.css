@@ -1,0 +1,84 @@
+.select {
+  display: flex;
+
+  &:hover {
+    .select__label {
+      @apply text-gray-600;
+    }
+
+    .select__label--secondary {
+      @apply text-gray-400;
+    }
+
+    .select__label--error {
+      @apply text-red-500;
+    }
+
+    .select__select {
+      @apply border-blue-300;
+    }
+
+    .select__select--secondary {
+      @apply border-yellow-300;
+    }
+
+    .select__select--error {
+      @apply border-red-500;
+    }
+  }
+}
+
+.select--horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.select--vertical {
+  flex-direction: column;
+}
+
+.select__label {
+  font-weight: 600;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 300ms;
+
+  @apply mb-1 ease-sharp text-gray-500 text-sm uppercase;
+}
+
+.select__label--horizontal {
+  width: 20rem;
+}
+
+.select__label--secondary {
+  @apply text-gray-300;
+}
+
+.select__label--error {
+  @apply text-red-500;
+}
+
+.select__select {
+  cursor: pointer;
+  width: 100%;
+
+  @apply form-select focus:outline-none focus:ring-2 border
+    ring-opacity-20 bg-white py-3 px-4 rounded-md transition duration-200 ease-sharp
+    ring-blue-500 border-gray-300 focus:border-blue-500;
+
+  &::placeholder {
+    @apply text-gray-300;
+  }
+}
+
+.select__select--secondary {
+  @apply ring-yellow-500 border-gray-100 focus:border-yellow-500;
+}
+
+.select__select--error {
+  @apply ring-red-500 border-red-500 focus:border-red-500;
+}
+
+.select__error {
+  @apply text-red-500 mt-1 text-sm;
+}

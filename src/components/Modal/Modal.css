@@ -1,0 +1,12 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: var(--msly-nav-width);
+
+  @apply bg-gray-900 bg-opacity-30 z-50;
+}

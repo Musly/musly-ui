@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownMenu /> should render with custom positioning 1`] = `
+<div
+  className="dropdown__menu bottom-full"
+  data-test-id="dropdown-menu"
+>
+  <nav
+    className="dropdown__menu__inner"
+  >
+    <ul
+      className="dropdown__menu__inner__list"
+    >
+      <div>
+        Test
+      </div>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`<DropdownMenu /> should render with default positioning 1`] = `
+<div
+  className="dropdown__menu dropdown__menu--top"
+  data-test-id="dropdown-menu"
+>
+  <nav
+    className="dropdown__menu__inner"
+  >
+    <ul
+      className="dropdown__menu__inner__list"
+    >
+      <div>
+        Test
+      </div>
+    </ul>
+  </nav>
+</div>
+`;

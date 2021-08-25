@@ -1,0 +1,6 @@
+.table__actions {
+  display: flex;
+  align-items: center;
+
+  @apply py-3 px-4;
+}

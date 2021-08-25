@@ -1,0 +1,30 @@
+query GetGroups {
+  groups {
+    id
+    title
+    type
+    manager {
+      id
+    }
+    positions {
+      id
+      title
+    }
+  }
+}
+
+mutation CreateGroup($title: String!, $type: String!, $managerId: ID!) {
+  createGroup(title: $title, type: $type, managerId: $managerId) {
+    id
+    title
+    type
+    manager {
+      id
+    }
+    positions {
+      id
+      title
+      userId
+    }
+  }
+}

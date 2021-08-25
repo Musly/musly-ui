@@ -1,0 +1,23 @@
+query FetchGenres ($groupId: ID!) {
+  genres(groupId: $groupId) {
+    id
+    title
+  }
+}
+
+mutation CreateGenre($groupId: ID!, $title: String!) {
+  createGenre(groupId: $groupId, title: $title) {
+    id
+    title
+  }
+}
+
+mutation DeleteGenre($genreId: ID!) {
+  deleteGenre(id: $genreId) {
+    id
+  }
+}
+
+mutation DeleteManyGenres($ids: [ID]!) {
+  deleteManyGenres(ids: $ids)
+}

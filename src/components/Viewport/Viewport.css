@@ -1,0 +1,11 @@
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  padding-top: var(--msly-header-height);
+  padding-left: var(--msly-nav-width);
+  min-width: var(--msly-min-width);
+}

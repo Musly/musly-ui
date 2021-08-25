@@ -1,0 +1,39 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .checkbox__label {
+      @apply text-gray-600;
+    }
+
+    .checkbox__input:not(:disabled) {
+      @apply border-blue-300;
+    }
+  }
+
+  &__input {
+    cursor: pointer;
+    width: 1.1428rem;
+    height: 1.1428rem;
+    transition-property: border-color;
+    transition-duration: 100ms;
+
+    @apply form-checkbox text-blue-500 rounded border border-gray-400 ease-sharp focus:border-blue-500;
+
+    &:disabled {
+      cursor: default;
+
+      @apply border-gray-200;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    transition-property: color;
+    transition-duration: 200ms;
+
+    @apply text-gray-500 ml-2 ease-sharp;
+  }
+}

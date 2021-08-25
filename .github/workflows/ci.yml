@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [stage]
+  pull_request:
+    branches: [prod, stage]
+
+jobs:
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node@v14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Cache eslint
+        uses: actions/cache@v2
+        id: eslint-cache
+        with:
+          path: "**/.eslintcache"
+          key: ${{ runner.os }}-eslint-${{ hashFiles('**/.eslintcache') }}
+
+      - name: Lint
+        env:
+          MUSLY_API_PORT: ${{ secrets.MUSLY_API_PORT }}
+          MUSLY_API_TOKEN_SECRET: ${{ secrets.MUSLY_API_TOKEN_SECRET }}
+          MUSLY_API_DB_URL: ${{ secrets.MUSLY_API_DB_URL }}
+          MUSLY_API_DB_NAME: ${{ secrets.MUSLY_API_DB_NAME }}
+          MUSLY_API_DB_USERNAME: ${{ secrets.MUSLY_API_DB_USERNAME }}
+          MUSLY_API_DB_PASSWORD: ${{ secrets.MUSLY_API_DB_PASSWORD }}
+          MUSLY_API_TEST_USER: ${{ secrets.MUSLY_API_TEST_USER }}
+          MUSLY_API_TEST_PASSWORD: ${{ secrets.MUSLY_API_TEST_PASSWORD }}
+        run: |
+          yarn install --frozen-lockfile
+          yarn lint --cache --quiet
+
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node@v14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Cache eslint
+        uses: actions/cache@v2
+        id: eslint-cache
+        with:
+          path: "**/.eslintcache"
+          key: ${{ runner.os }}-eslint-${{ hashFiles('**/.eslintcache') }}
+
+      - name: Test
+        env:
+          MUSLY_API_PORT: ${{ secrets.MUSLY_API_PORT }}
+          MUSLY_API_TOKEN_SECRET: ${{ secrets.MUSLY_API_TOKEN_SECRET }}
+          MUSLY_API_DB_URL: ${{ secrets.MUSLY_API_DB_URL }}
+          MUSLY_API_DB_NAME: ${{ secrets.MUSLY_API_DB_NAME }}
+          MUSLY_API_DB_USERNAME: ${{ secrets.MUSLY_API_DB_USERNAME }}
+          MUSLY_API_DB_PASSWORD: ${{ secrets.MUSLY_API_DB_PASSWORD }}
+          MUSLY_API_TEST_USER: ${{ secrets.MUSLY_API_TEST_USER }}
+          MUSLY_API_TEST_PASSWORD: ${{ secrets.MUSLY_API_TEST_PASSWORD }}
+        run: |
+          yarn install --frozen-lockfile
+          yarn test

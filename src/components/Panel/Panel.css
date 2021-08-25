@@ -1,0 +1,5 @@
+.panel {
+  overflow: hidden;
+
+  @apply bg-gray-25 rounded-lg shadow-md p-7;
+}

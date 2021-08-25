@@ -1,0 +1,19 @@
+.signup {
+  width: 50%;
+  display: flex;
+
+  @apply px-12 py-32 pt-44 bg-gradient-to-br from-blue-900 to-blue-700 text-white;
+
+  &__content {
+    max-width: 420px;
+    min-width: 350px;
+  }
+
+  &__headline {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  &__description {
+    @apply text-lg text-gray-500 mb-16;
+  }
+}

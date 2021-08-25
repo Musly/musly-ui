@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: var(--msly-nav-width);
+  height: var(--msly-header-height);
+  display: flex;
+  min-width: calc(var(--msly-min-width) - var(--msly-nav-width));
+  z-index: 10;
+  align-items: center;
+
+  @apply bg-gray-50 shadow-header;
+}

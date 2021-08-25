@@ -1,0 +1,11 @@
+.create-group {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: var(--msly-min-width);
+  display: flex;
+}

@@ -1,0 +1,7 @@
+.navigation-footer {
+  @apply border-t border-blue-900 border-opacity-70;
+}
+
+.navigation-footer__content {
+  @apply border-t border-blue-200 border-opacity-10 py-4 px-6 text-xs text-blue-600;
+}

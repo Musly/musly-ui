@@ -1,0 +1,26 @@
+.dropdown__item__link {
+  display: flex;
+  align-items: center;
+  transition-property: color, background-color;
+  transition-duration: 200ms;
+
+  @apply py-3 px-4 bg-transparent ease-sharp text-gray-800;
+
+  &--active {
+    font-weight: 600;
+    cursor: default;
+    pointer-events: none;
+
+    .dropdown__icon {
+      @apply text-blue-500;
+    }
+  }
+
+  &:not(.dropdown__item__link--active):hover {
+    @apply bg-gray-100 text-blue-500;
+  }
+}
+
+.dropdown__icon {
+  @apply mr-4 text-gray-500;
+}

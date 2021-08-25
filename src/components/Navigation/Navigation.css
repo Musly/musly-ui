@@ -1,0 +1,19 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: var(--msly-nav-width);
+  z-index: 20;
+
+  @apply bg-gradient-to-br from-blue-900 to-blue-700 shadow-navigation;
+}
+
+.navigation__menu {
+  flex-grow: 1;
+
+  @apply py-4;
+}
